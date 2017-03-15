@@ -17,7 +17,7 @@ module.exports = function(io,cluster){
 
 		// Chat event handler
 		socket.on('chat',function(msgTxt){
-			console.log(' chat message ===>> ' + msgTxt);
+			console.log(' chat message ===>> ' + msgTxt  + '  ******!!!******   from worker ' + cluster.worker.process.pid);
 			io.emit('chat',msgTxt);
 		})
 
