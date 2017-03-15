@@ -25,7 +25,7 @@
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
     <script>
       //var socket = io();
-      var socket = io.connect('http://localhost:3000')
+      var socket = io.connect('http://ec2-54-213-230-65.us-west-2.compute.amazonaws.com:3000')
       $('form').submit(function(){
         socket.emit('chat', $('#m').val());
         $('#m').val('');
